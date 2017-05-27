@@ -1,0 +1,42 @@
+{
+	"manifest_version": 2,
+	"name": "Easy Notes",
+	"description": "Easy Notes",
+	"version": "1.0",
+	"icons": { 
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png" 
+	},
+	"background": {
+        "scripts": ["local_storage.js", "event.js"],
+        "persistent": false
+    },
+	"browser_action": {
+		"default_icon": {                    
+			"19": "img/icon48.png",          
+			"38": "img/icon48.png"          
+		},
+		"default_popup": "popup.html"
+	},
+	"web_accessible_resources": [
+		"img/icon128.png"
+	],
+	"permissions": [
+        "tabs", 
+        "http://*/*", 
+        "https://*/*",
+		"storage",
+		"contextMenus",
+		"identity"
+    ],
+"content_security_policy":"script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://easynotes-8f50d.firebaseio.com https://www.googleapis.com; object-src 'self'",
+"oauth2": {
+	"client_id": "157366813994-dqhvkcp12ge2e1ko6785h1sc93dlc083.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlEUiGA+uHVTOVXQoUz7q/XVi+Hso30mSrOnTeov5SpsGQTRNTocBhSAkA9x6GZdcQO3AhCO+NNL/tMKN2AtijQ7ZZv43xGUE2NhzbnnynoJAW9mGE6VfIPS/p0C74PvfoSGGo7x4pLtIN7iGuHdF16IjN56DZgWDfCyhwRKQNsjxgjFSaz77xHXDPEB5yrouQ4kXTFoXP2Hn7kjz7um1nk4kvNGLtVMLxt2S75HR8UcIYSzTAnqzbK7kLpCo34uS+MYAqJTzt7edqMTA40z6PcN4BqFRGULUta7Tum3Gae5A6u9Yeixe53vCCdF0cLDuSUjhaLgc+6xdclDwjXVuSQIDAQAB-----END PUBLIC KEY-----"
+}

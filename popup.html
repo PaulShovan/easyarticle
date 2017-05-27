@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style/bootstrap.min.css">
+		<link rel="stylesheet" href="style/custom.css">
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/knockout-min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+		<script src="note_list.js"></script>
+		<script src="download_note.js"></script>
+		<script src="popup.js"></script>
+		<script src="credentials.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+			<button id="login-button">Sign-in with Google</button>
+			<label id="auth-user"></label>
+			<input type="hidden" id="auth-user-id">
+			<input type="hidden" id="note-id">
+  			<ul class="nav nav-tabs">
+    			<li id="note-tab-li"><a data-toggle="tab" id="note-tab" href="#home">Notes</a></li>
+    			<li class="active"><a data-toggle="tab" id="editor-tab" href="#editor">Editor</a></li>
+  			</ul>
+			<div class="tab-content">
+				<div id="home" class="tab-pane fade in active">
+					<ul data-bind="foreach: notes">
+						<li>
+							<span data-bind="text: title"> </span>
+							<a href="#" data-bind="click: $parent.openSelectedNote.bind($data)">Open</a>
+						</li>
+					</ul>
+				</div>
+				<div id="editor" class="tab-pane fade in active">
+					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<div class="input-group-addon">Note Title</div>
+						<input type="text" class="form-control" id="note-title" placeholder="Note Title">
+					</div>
+					<a href="" class="hide" id="dload"></a>
+					<textarea class="form-control" rows="5" id="output"></textarea>
+					<input type="button" id="update" class="btn btn-info" value="Update">
+					<input type="button" id="save" class="btn btn-success" value="Save">
+					<input type="button" id="download" class="btn" value="Download">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
