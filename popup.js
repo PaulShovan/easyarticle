@@ -77,6 +77,12 @@ function storageNoteReceived(note){
         document.getElementById('editor-tab').click();
     }
 }
+function deleteNoteFromRemoteStorage(note){
+    var deleteDone = firebaseStorage.DeleteData(note);
+    if(deleteDone){
+        getNotes();
+    }
+}
 function getNotes(){
     firebaseStorage.GetNotes(function(notes){
         viewModel.notes(notes);

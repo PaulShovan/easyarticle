@@ -36,6 +36,12 @@ var firebaseStorage = function(){
         contactsRef.push(data);
         return true;
     }
+    function DeleteData(data){
+        var uid = document.getElementById('auth-user-id').value;
+        var contactsRef = firebase.database().ref('demo/' + uid);
+        contactsRef.child(data.Id).remove();
+        return true;
+    }
     var initApp = function() {
   // Listen for auth state changes.
   // [START authstatelistener]
@@ -111,7 +117,8 @@ function startSignIn() {
     return{
         SaveNote: AddData,
         GetNotes: GetData,
-        InitApp: initApp
+        InitApp: initApp,
+        DeleteData: DeleteData
     }
 }()
 window.onload = function() {
