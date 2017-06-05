@@ -52,7 +52,7 @@ var firebaseStorage = function(){
       document.getElementById('auth-user').innerHTML = user.displayName;
       document.getElementById('auth-user-id').value = user.uid;
       document.getElementById('note-tab-li').className = "";
-      document.getElementById('save').disabled = false;
+      document.getElementById('save').className = "";
       // [END_EXCLUDE]
     } else {
       // Let's try to get a Google auth token programmatically.
@@ -62,7 +62,7 @@ var firebaseStorage = function(){
       document.getElementById('auth-user-id').value = "";
       document.getElementById('editor-tab').click();
       document.getElementById('note-tab-li').className += "hide";
-      document.getElementById('save').disabled = true;
+      document.getElementById('save').className += "hide";
       // [END_EXCLUDE]
     }
     document.getElementById('login-button').disabled = false;

@@ -9,6 +9,7 @@ var storage = function(){
     var appendNewNote = function(existingNote, newNote){
         for (var i = 0, len = existingNote.content.length; i < len; i++) {
             if(existingNote.content[i].url == newNote.url){
+                existingNote.content[i].text += '\n';
                 existingNote.content[i].text += newNote.text;
                 return existingNote;
             }
