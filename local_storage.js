@@ -1,7 +1,7 @@
 var storage = function(){
-    var noteTemplate = function(newNote){
+    var noteTemplate = function(newNote, title){
         return{
-            'title': 'New Note',
+            'title': title,
             'Id': '',
             'content': [newNote]
         }
@@ -60,11 +60,11 @@ var storage = function(){
             'text': noteText
         }
     }
-    var saveNote = function(note){
+    var saveNote = function(note, title){
         getNoteFromStorage(function(existingNote){
             var newNote = {};
             if(isObjectEmpty(existingNote)){
-                newNote = new noteTemplate(note);
+                newNote = new noteTemplate(note, title);
             }else{
                 newNote = appendNewNote(existingNote.note, note);
             }

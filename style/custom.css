@@ -3,8 +3,8 @@ html {
     width: 700px;
 }
 body {
-    height: 100%;
-    width: 100%;
+    height: 97%;
+    width: 97%;
 }
 .hide{
     display: none;
@@ -13,5 +13,32 @@ textarea.form-control {
     height:100% !important;
 }
 #editor{
-    height: 450px;
+    height: 500px;
+}
+.width-93-percent{
+    width: 93%
+}
+.margin-2-percent{
+    margin: 2%;
+}
+.margin-top-20-px{
+    margin-top: 20px;
+}
+.height-30-px{
+    height: 30px;
+}
+.width-50-percent{
+    width: 50%
+}
+.icon-font-size{
+    font-size: 28px;
+}
+.red-icon{
+    color: red;
+}
+.blue-icon{
+    color: blue;
+}
+.green-icon{
+    color: green;
 }

@@ -12,16 +12,16 @@ function saveModifiedNotes(note){
   storage.SaveModifiedNote(note)
 }
 
-function addSelectedText(sText, url){
+function addSelectedText(sText, url, title){
     var info = {
     'url': url,
-    'text': sText
+    'text': sText,
   }
-  storage.SaveNote(info);
+  storage.SaveNote(info, title);
 }
 
 function onClickHandler(info, tab) {
-  addSelectedText(info.selectionText, info.pageUrl);
+  addSelectedText(info.selectionText, info.pageUrl, tab.title);
 };
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 

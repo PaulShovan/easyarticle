@@ -15,8 +15,6 @@ var firebaseStorage = function(){
                 notes.push(itemVal);
             });
             callback(notes);
-            // var data = snapshot.val();
-            // console.log(snapshot.val());
         });
     }
     function EditData(data, uid){

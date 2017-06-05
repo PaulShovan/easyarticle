@@ -30,7 +30,7 @@
 		"contextMenus",
 		"identity"
     ],
-"content_security_policy":"script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://easynotes-8f50d.firebaseio.com https://www.googleapis.com; object-src 'self'",
+"content_security_policy":"script-src 'self' 'unsafe-eval' https://www.gstatic.com/ https://easynotes-8f50d.firebaseio.com https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
 "oauth2": {
 	"client_id": "157366813994-dqhvkcp12ge2e1ko6785h1sc93dlc083.apps.googleusercontent.com",
     "scopes": [
